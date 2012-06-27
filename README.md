@@ -3,9 +3,6 @@ CHAOS.Portal.Indexing
 
 An extension for working with and querying Indexes on the Portal webservice hosting platform
 
-#CHAOS.Portal.Client (PHP)
-This is a PHP Portal API Client. It enables easy communication with a CHAOS Portal API (protocol version 4).
-
 ##Requirements
 .Net 4.0
 Entity Framework 4.3
