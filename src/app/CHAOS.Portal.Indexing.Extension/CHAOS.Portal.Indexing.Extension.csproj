@@ -36,9 +36,13 @@
     <Reference Include="Portal">
       <HintPath>..\..\..\lib\Portal.dll</HintPath>
     </Reference>
+    <Reference Include="System" />
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTO\Facet.cs" />
+    <Compile Include="DTO\FacetsResult.cs" />
+    <Compile Include="DTO\IndexResponse.cs" />
     <Compile Include="Index.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -5,6 +5,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "app", "app", "{21DD489C-8AF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CHAOS.Portal.Indexing.Extension", "src\app\CHAOS.Portal.Indexing.Extension\CHAOS.Portal.Indexing.Extension.csproj", "{2F9BBDED-B839-4C9B-AD97-EE1ABED0B7E4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{3C52EA4E-8F54-42F6-8AAA-6A793D173040}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
