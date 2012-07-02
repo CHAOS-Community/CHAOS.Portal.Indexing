@@ -33,6 +33,9 @@
     <Reference Include="CHAOS">
       <HintPath>..\..\..\lib\CHAOS.dll</HintPath>
     </Reference>
+    <Reference Include="CHAOS.MCM.Module">
+      <HintPath>..\..\..\lib\CHAOS.MCM.Module.dll</HintPath>
+    </Reference>
     <Reference Include="Portal">
       <HintPath>..\..\..\lib\Portal.dll</HintPath>
     </Reference>
