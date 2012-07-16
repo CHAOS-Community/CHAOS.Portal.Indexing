@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CHAOS.Portal.Indexing.Exten
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{3C52EA4E-8F54-42F6-8AAA-6A793D173040}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{727B12F0-22F4-4629-B393-0F9AA581E57C}"
+	ProjectSection(SolutionItems) = preProject
+		CHAOS.Portal.Indexing.build = CHAOS.Portal.Indexing.build
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

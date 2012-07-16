@@ -1,0 +1,32 @@
+﻿<project name="CHAOS.Portal.Indexing" default="build">
+  
+  <property name="nantcontrib_path" value="..\tools\nantcontrib-0.92"/>
+  <property name="nant_path" value="..\tools\nant-0.92"/>
+  <property name="project_path" value="..\"/>
+  <property name="solutionfile" value="CHAOS.Portal.Indexing.sln"/>
+  
+  <target name="build">
+    <loadtasks assembly="${path::combine(nantcontrib_path, 'bin\NAnt.Contrib.Tasks.dll')}" />
+    <loadtasks assembly="${path::combine(nant_path, 'bin\Fyhr.NAnt.ILMerge.dll')}" />
+    
+    <msbuild project="${path::combine(project_path,solutionfile)}">
+      <arg value="/property:Configuration=release" />
+      <arg value="/t:Rebuild" />
+    </msbuild>
+
+    <ilmerge outputfile="CHAOS.Portal.IndexExtension.dll"
+             targetkind="dll"
+             logfile="ilmerge.log">
+      <inputassemblies>
+        <include name="..\src\app\CHAOS.Portal.Indexing.Extension\bin\Release\CHAOS.Portal.Indexing.Extension.dll" />
+      </inputassemblies>
+
+      <librarypath>
+        <include name="..\lib\*.dll" />
+      </librarypath>
+      
+    </ilmerge>
+    
+  </target>
+  
+</project>
