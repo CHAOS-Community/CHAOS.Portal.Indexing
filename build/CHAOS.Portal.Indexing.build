@@ -16,14 +16,17 @@
 
     <ilmerge outputfile="CHAOS.Portal.IndexExtension.dll"
              targetkind="dll"
-             logfile="ilmerge.log">
+             logfile="IndexExtension-ilmerge.log"             
+             targetplatform="v4"
+             targetplatformdirectory="C:\Windows\Microsoft.NET\Framework64\v4.0.30319">
+
+      <librarypath>
+        <include name="..\lib\" />
+      </librarypath>
+
       <inputassemblies>
         <include name="..\src\app\CHAOS.Portal.Indexing.Extension\bin\Release\CHAOS.Portal.Indexing.Extension.dll" />
       </inputassemblies>
-
-      <librarypath>
-        <include name="..\lib\*.dll" />
-      </librarypath>
       
     </ilmerge>
     
