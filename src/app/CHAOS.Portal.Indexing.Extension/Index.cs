@@ -20,7 +20,7 @@ namespace CHAOS.Portal.Indexing.Extension
 		/// </summary>
 		/// <param name="callContext"></param>
 		/// <param name="query"></param>
-        public void Search( ICallContext callContext, IQuery query, UUID accessPointGUID )
+        public IndexResponse Search( ICallContext callContext, IQuery query, UUID accessPointGUID )
         {
 			if( accessPointGUID != null )
                 query.Query = string.Format( "({0})+AND+(PubStart:[*+TO+NOW]+AND+PubEnd:[NOW+TO+*])", query.Query );
@@ -33,7 +33,7 @@ namespace CHAOS.Portal.Indexing.Extension
 
             var response = callContext.IndexManager.GetIndex( "CHAOS.MCM.Module.AMCMModule" ).Get<UUIDResult>( query );
 
-            callContext.PortalResponse.PortalResult.GetModule( "Portal" ).AddResult( new IndexResponse( response ) );
+            return new IndexResponse( response );
         }
 
         #endregion
