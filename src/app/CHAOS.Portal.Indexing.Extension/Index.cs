@@ -11,6 +11,7 @@ namespace CHAOS.Portal.Indexing.Extension
 	/// <summary>
 	/// This module depends on CHAOS.MCM.Module.FolderModule
 	/// </summary>
+	[Extension("Portal")]
     public class Index : AExtension
     {
         #region Search
