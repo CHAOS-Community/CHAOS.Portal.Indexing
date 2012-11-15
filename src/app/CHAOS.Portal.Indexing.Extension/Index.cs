@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using CHAOS.Index;
-using CHAOS.MCM.Module.Rights;
+using CHAOS.MCM.Permission;
 using CHAOS.Portal.Core;
 using CHAOS.Portal.Core.Extension;
 using CHAOS.Portal.DTO.Standard;
@@ -27,7 +27,7 @@ namespace CHAOS.Portal.Indexing.Extension
                 query.Query = string.Format( "({0})+AND+(PubStart:[*+TO+NOW]+AND+PubEnd:[NOW+TO+*])", query.Query );
             else
             {
-				var folders = callContext.PortalApplication.GetModule<MCM.Module.FolderModule>().Get( callContext, null, null, null, (uint) FolderPermissions.Read );
+				var folders = callContext.PortalApplication.GetModule<MCM.Module.FolderModule>().Get( callContext, null, null, null, (uint) FolderPermission.Read );
 
                 query.Query = string.Format( "({0})+AND+({1})", query.Query, string.Join( "+OR+", folders.Select( folder => string.Format( "FolderTree:{0}", folder.ID ) ) ) );
             }
