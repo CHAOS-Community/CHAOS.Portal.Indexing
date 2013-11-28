@@ -24,7 +24,7 @@ namespace CHAOS.Portal.Indexing.Extension
         public IndexResponse Search( ICallContext callContext, IQuery query, UUID accessPointGUID )
         {
 			if( accessPointGUID != null )
-                query.Query = string.Format( "({0})+AND+(PubStart:[*+TO+NOW]+AND+PubEnd:[NOW+TO+*])", query.Query );
+                query.Query = string.Format("({0})+AND+(ap{1}_PubStart:[*+TO+NOW]+AND+ap{1}_PubEnd:[NOW+TO+*])", query.Query, accessPointGUID);
             else
             {
 				var folders = callContext.PortalApplication.GetModule<MCM.Module.FolderModule>().Get( callContext, null, null, null, (uint) FolderPermission.Read );
